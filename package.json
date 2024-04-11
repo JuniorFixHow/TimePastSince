@@ -1,0 +1,30 @@
+{
+  "name": "@juniorfixhow/durationjs",
+  "version": "1.0.0",
+  "description": "This package is to check the time difference.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuniorFixHow/TimePastSince.git"
+  },
+  "keywords": [
+    "time",
+    "time past since",
+    "time remaining"
+  ],
+  "author": "JuniorFixHow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuniorFixHow/TimePastSince/issues"
+  },
+  "homepage": "https://github.com/JuniorFixHow/TimePastSince#readme",
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  }
+}
