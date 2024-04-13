@@ -69,3 +69,33 @@ export const checkTimeSince = (time: Date) => {
       return `ending now`;
     }
   };
+
+
+
+  export const countDown = (time: string) => {
+    let formattedTime = ''; // Variable to store the latest formatted time
+  
+    const timerInterval = setInterval(() => {
+      const futureDate = new Date(time);
+      const now = new Date();
+  
+      if (futureDate > now) {
+        const timeDiff = futureDate.getTime() - now.getTime();
+        const seconds = Math.floor((timeDiff / 1000) % 60);
+        const minutes = Math.floor((timeDiff / 1000 / 60) % 60);
+        const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+  
+        formattedTime = `${hours.toString().padStart(2, '0')}:${minutes
+          .toString()
+          .padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      } else {
+        clearInterval(timerInterval); // Clear the interval if the future date is reached
+      }
+    }, 1000);
+  
+    // Return a function that can be called to stop the timer and get the latest formatted time
+    return {
+      stop: () => clearInterval(timerInterval),
+      getFormattedTime: () => formattedTime,
+    };
+  };

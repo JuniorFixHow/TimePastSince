@@ -1,6 +1,6 @@
 {
   "name": "@juniorfixhow/durationjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package is to check the time difference.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -15,7 +15,8 @@
   "keywords": [
     "time",
     "time past since",
-    "time remaining"
+    "time remaining",
+    "count down"
   ],
   "author": "JuniorFixHow",
   "license": "MIT",
